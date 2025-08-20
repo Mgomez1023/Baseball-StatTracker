@@ -1,0 +1,65 @@
+.stats-container {
+  min-height: 30%;
+  background-color: none; /* gray-50 */
+  padding: 1rem;
+}
+
+.stats-title {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 1rem;
+  height: auto;
+
+  border: 3px solid var(--main-blue);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.table-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.table {
+  min-width: 860px;
+  width: 100%;
+  height: 110px;
+  border-collapse: collapse;
+  overflow-y: auto;
+}
+
+.table thead tr {
+  background-color: #f3f4f6; /* gray-100 */
+  text-align: left;
+}
+
+.table th,
+.table td {
+  padding: 0.7rem 0.75rem; /* px-3 py-2 */
+  border: 1px solid #d1d5db; /* gray-300 */
+  font-size: 14px;
+  text-align: center;
+}
+
+.table td.font-medium {
+  font-weight: 500;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.stats-footnote {
+  font-size: 0.875rem; /* text-sm */
+  color: #4b5563; /* gray-600 */
+  margin-top: 0.75rem;
+}
+
+.stats-footnote ul {
+  list-style: disc;
+  margin-left: 1.25rem;
+  margin-top: 0.25rem;
+}
