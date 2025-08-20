@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styling/AddGameForm.css"
+import "../styling/addGameForm.css"
 import { updatePlayer } from "../utils/playerUtils"
 
 
