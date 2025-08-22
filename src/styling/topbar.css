@@ -1,6 +1,6 @@
 .topbar {
     display: flex;
-    position: relative;
+    position: sticky;
     overflow: hidden;
     flex-direction: row;
     justify-content: space-between;
@@ -11,6 +11,11 @@
     box-shadow: var(--shadow);
     border-bottom: var(--border-card);
     color: var(--main-blue);
+}
+
+.dropdown-drawer, .player-dropdown {
+    position: relative;
+
 }
 
 .player-indicator {
