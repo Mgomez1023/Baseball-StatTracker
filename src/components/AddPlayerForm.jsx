@@ -176,7 +176,7 @@ export default function AddPlayerForm({ onCancel, selectedPlayer, setSelectedPla
                     <label style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                         Height:
                     </label>
-                    <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", alignItems: "center", gap: "1vw" }}>
+                    <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", alignItems: "center",}}>
 
                         <input
                             className="height-input"
