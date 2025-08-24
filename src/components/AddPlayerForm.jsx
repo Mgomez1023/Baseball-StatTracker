@@ -226,7 +226,7 @@ export default function AddPlayerForm({ onCancel, selectedPlayer, setSelectedPla
           <button type="button" className="submit-button" onClick={handleCancel}>
             Cancel
           </button>
-          <button type="submit" className="cancel-button" onClick={() => {updatePlayer(selectedPlayer, setSelectedPlayer, formData, players, setPlayers); handleCancel;}}>Save Game</button>
+          <button type="submit" className="cancel-button" onClick={() => {updatePlayer(selectedPlayer, setSelectedPlayer, formData, players, setPlayers); handleCancel;}}>Save Player</button>
         </div>
       </form>
       <style>
