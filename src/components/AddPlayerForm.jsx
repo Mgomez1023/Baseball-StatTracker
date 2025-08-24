@@ -176,7 +176,7 @@ export default function AddPlayerForm({ onCancel, selectedPlayer, setSelectedPla
                     <label style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                         Height:
                     </label>
-                    <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", alignItems: "center",}}>
+                    <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", alignItems: "center", color: "var(--text)",}}>
 
                         <input
                             className="height-input"
@@ -203,7 +203,7 @@ export default function AddPlayerForm({ onCancel, selectedPlayer, setSelectedPla
                     <label>
                     Weight:
                     </label>
-                    <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "0.5vw" }}>
+                    <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "0.5vw", color: "var(--text)",}}>
 
                         <input
                             type="number"
