@@ -45,11 +45,8 @@ const defaultPlayer = {
     position: "CF" || "N/A",
     number: 20 || "N/A",
     team: "Angels" || "N/A",
-    height: {
-        feet: 6 || 0,
-        inches: 2 || 0
-    },
-    weight: 210 || "N/A",
+    feet: 6 || 0,
+    inches: 2 || 0,    weight: 210 || "N/A",
     bats: "R" || "N/A",
     throws: "R" || "N/A",
     stats: {
@@ -108,10 +105,8 @@ const defaultPlayer = {
     position: "RF" || "N/A",
     number: 99 || "N/A",
     team: "Yankees" || "N/A",
-    height: {
-        feet: 6 || 0,
-        inches: 7 || 0
-    },
+    feet: 6 || 0,
+    inches: 7 || 0,
     weight: 260 || "N/A",
     bats: "L" || "N/A",
     throws: "L" || "N/A",
