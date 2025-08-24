@@ -4,7 +4,6 @@
     left: 0;
     right: 0;
     height: 80%;
-    overflow-y: auto;
     background: var(--gradient);
     border-top: 2px solid #ccc;
     padding: 1rem;
