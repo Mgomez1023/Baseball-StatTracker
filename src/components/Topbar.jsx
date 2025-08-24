@@ -5,6 +5,7 @@ import { MdKeyboardArrowDown } from 'react-icons/md';
 import { AiOutlineClose } from 'react-icons/ai';
 import { useState, useEffect } from 'react';
 import { addPlayer } from "../utils/playerUtils"
+import AddPlayerForm from './AddPlayerForm.jsx';
 
 const toggle = () => {
   if (document.body.classList.contains("dark")) {
@@ -23,6 +24,8 @@ export default function Topbar({players, setPlayers, selectedPlayer, setSelected
   const togglePlayerMenu = () => setPlayerMenuOpen(!playerMenuOpen);
   const [addMenuOpen, setAddMenuOpen] = useState(false);
   const toggleAddMenu = () => setAddMenuOpen(!addMenuOpen);
+  const [showForm, setShowForm] = useState(false);
+  
 
   const playerName = "michael jackson";
 
@@ -79,11 +82,21 @@ export default function Topbar({players, setPlayers, selectedPlayer, setSelected
             <button
               className="add-button"
               onClick={() =>
-                addPlayer(players, setPlayers, playerName)
+                setShowForm(true)
               }
             >
               Add Player
             </button>
+
+            {showForm && (
+              <AddPlayerForm 
+                onCancel={() => setShowForm(false)}
+                selectedPlayer={selectedPlayer}
+                setSelectedPlayer={setSelectedPlayer}
+                players={players}
+                setPlayers={setPlayers}
+              />
+            )}
 
 
           </ul>

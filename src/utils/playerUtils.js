@@ -1,33 +1,39 @@
 export function addPlayer(players, setPlayers, name) {
-const newPlayer = {
-    id: Date.now(),
-    name: name,
-    stats: {
-        runs: 0,
-        singles: 0,
-        doubles: 0,
-        triples: 0,
-        homeRuns: 0,
-        games: 0,
-        atBats: 0,
-        hits: 0,
-        rbis: 0,
-        walks: 0,
-        strikeouts: 0,
-        stolenBases: 0,
-        caughtStealing: 0,
-        average: 0.000,
-        obp: 0.000,
-        slg: 0.000,
-        ops: 0.000,
-    },
-    gameHistory: []
-};
+    const newPlayer = {
+        id: Date.now(),
+        name: name,
+        position: position || "N/A",
+        team: team || "N/A",
+        height: height || "N/A",
+        weight: weight || "N/A",
+        bats: bats || "N/A",
+        throws: throws || "N/A",
+        stats: {
+            runs: 0,
+            singles: 0,
+            doubles: 0,
+            triples: 0,
+            homeRuns: 0,
+            games: 0,
+            atBats: 0,
+            hits: 0,
+            rbis: 0,
+            walks: 0,
+            strikeouts: 0,
+            stolenBases: 0,
+            caughtStealing: 0,
+            average: 0.000,
+            obp: 0.000,
+            slg: 0.000,
+            ops: 0.000,
+        },
+        gameHistory: []
+    };
 
-const updatedPlayers = [...players, newPlayer];
-setPlayers(updatedPlayers);
+    const updatedPlayers = [...players, newPlayer];
+    setPlayers(updatedPlayers);
 
-localStorage.setItem("players", JSON.stringify(updatedPlayers));
+    localStorage.setItem("players", JSON.stringify(updatedPlayers));
 }
 
 

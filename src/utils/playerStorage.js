@@ -1,7 +1,13 @@
 // Example player object
 export const createPlayer = (name) => ({
   id: Date.now(),
-  name,
+  name: name,
+  position: position || "N/A",
+  team: team || "N/A",
+  height: height || "N/A",
+  weight: weight || "N/A",
+  bats: bats || "N/A",
+  throws: throws || "N/A",
   stats: {
     gamesPlayed: 0,
     atBats: 0,
