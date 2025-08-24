@@ -40,9 +40,18 @@ export const loadPlayers = () => {
 
 const defaultPlayer = {
     id: 1,
-    name: "Mike Trout",
-    team: "Angels",
-    position: "CF",
+
+    name: "Mike Trout" || "N/A",
+    position: "CF" || "N/A",
+    number: 20 || "N/A",
+    team: "Angels" || "N/A",
+    height: {
+        feet: 6 || 0,
+        inches: 2 || 0
+    },
+    weight: 210 || "N/A",
+    bats: "R" || "N/A",
+    throws: "R" || "N/A",
     stats: {
       runs: 3,
       singles: 2,

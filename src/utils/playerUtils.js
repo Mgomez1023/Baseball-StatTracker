@@ -1,13 +1,23 @@
-export function addPlayer(players, setPlayers, name) {
+export function addPlayer(selectedPlayer, setSelectedPlayer, formData, players, setPlayers, name) {
+    console.log("Player Form Data: ", formData);
+    
+    const updatedVariables = {
+        name: formData.name || "N/A",
+        position: formData.position || "N/A",
+        number: formData.number || "N/A",
+        team: formData.team || "N/A",
+        height: {
+            feet: formData.feet || 0,
+            inches: formData.inches || 0
+        },
+        weight: formData.weight || "N/A",
+        bats: formData.bats || "N/A",
+        throws: formData.throws || "N/A",
+    };
+
     const newPlayer = {
         id: Date.now(),
-        name: name,
-        position: position || "N/A",
-        team: team || "N/A",
-        height: height || "N/A",
-        weight: weight || "N/A",
-        bats: bats || "N/A",
-        throws: throws || "N/A",
+        ...updatedVariables,
         stats: {
             runs: 0,
             singles: 0,
@@ -32,8 +42,12 @@ export function addPlayer(players, setPlayers, name) {
 
     const updatedPlayers = [...players, newPlayer];
     setPlayers(updatedPlayers);
+    setSelectedPlayer(newPlayer);
 
+    // Save updated players list to localStorage    
     localStorage.setItem("players", JSON.stringify(updatedPlayers));
+
+    console.log("Added new player: ", players);
 }
 
 

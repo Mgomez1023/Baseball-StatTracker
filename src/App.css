@@ -14,6 +14,39 @@
   border-radius: 15px;
 }
 
+.player-name {
+  border-bottom: 3px solid var(--main-blue);
+  width: 80%;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+  margin: 1.5rem auto 0 auto;
+}
+
+.info-content1 {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+  margin: 1rem auto 1rem auto;
+  width: 80%;
+  height: auto;
+  background-color: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-bottom: 3px solid var(--main-blue);
+}
+
+.player-info {
+  margin: 1rem auto 0rem auto;
+  width: 100%;
+  height: 35vh;
+  background: var(--gradient);
+  box-shadow: var(--shadow);
+  background-color: var(--bg);
+  border-radius: 15px;
+  padding-bottom: 0.5rem;
+}
+
 .main-container {
   overflow-y: auto;
   overflow-x: hidden;
@@ -42,14 +75,19 @@
   display: flex;
   flex-direction: column;
   padding: 2vh 7vw;
-  background: rgba(30, 136, 229, 0.1);
-  background: linear-gradient(180deg, rgba(30, 136, 229, 1) 30%, var(--bg-light) 35%, var(--bg-light) 55%);
+  background: linear-gradient(
+    180deg,
+    var(--bg-light) 0%,        /* top */
+    rgba(30, 136, 229, 1) 40%,             /* fade into bg */
+    rgba(30, 136, 229, 0.2) 70%,             /* main middle section */
+    var(--bg-light) 100%                   /* bottom */
+  );
   height: 100%;
   position: relative;
   overflow: hidden;
 }
 
-.header-content {
+.player-content {
   display: flex;
   justify-self: center;
   justify-content: space-evenly;
@@ -88,7 +126,7 @@
 }
 
 .tables {
-  margin-top: 15vh;
+  margin-top: 5vh;
   width: 100%;
   border: var(--border-card);
   border-top: 1px solid var(--highlight);

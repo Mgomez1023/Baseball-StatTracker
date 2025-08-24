@@ -48,8 +48,30 @@ function App() {
     <>
       <div className="main-container">
         <Topbar className="topbar" players={players} setPlayers={setPlayers} selectedPlayer={selectedPlayer} setSelectedPlayer={setSelectedPlayer} />
+
         <div class="content"> 
-          <div className="header-content">
+          <div className="player-info"> 
+
+            <h2 className="player-name">{selectedPlayer.name}</h2>
+
+            <div className="info-content1">
+              <p>Team: {selectedPlayer.team}</p>
+              <p>Number: {selectedPlayer.number}</p>
+            </div>
+
+            <div className="info-content1">
+              <p>Position: {selectedPlayer.position}</p>
+              <p>Bats: {selectedPlayer.bats}</p>
+              <p>Throws: {selectedPlayer.throws}</p>
+            </div>
+
+            <div className="info-content1"> 
+              <p>Height: {selectedPlayer.height.feet}' {selectedPlayer.height.inches}"</p>
+              <p>Weight: {selectedPlayer.weight} lbs</p>
+            </div>
+
+          </div>
+          <div className="player-content">
             <div className="label1">
               <div className="number">
                 {selectedPlayer.stats.average.toFixed(3)}

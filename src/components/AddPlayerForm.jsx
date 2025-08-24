@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../styling/addPlayerForm.css"
 import { updatePlayer } from "../utils/playerUtils"
+import { addPlayer } from "../utils/playerUtils"
 
 
 export default function AddPlayerForm({ onCancel, selectedPlayer, setSelectedPlayer, players, setPlayers }) {
@@ -85,7 +86,6 @@ export default function AddPlayerForm({ onCancel, selectedPlayer, setSelectedPla
                     placeholder="Team"
                     value={formData.team}
                     onChange={handleChange}
-                    required
                     />
             </div>
 
@@ -135,7 +135,7 @@ export default function AddPlayerForm({ onCancel, selectedPlayer, setSelectedPla
                 </label>
                 <select
                     name="bats"
-                    value={formData.walks}
+                    value={formData.bats}
                     onChange={handleChange}
                 >
                     <option value="">Select Bats</option>
@@ -226,7 +226,7 @@ export default function AddPlayerForm({ onCancel, selectedPlayer, setSelectedPla
           <button type="button" className="submit-button" onClick={handleCancel}>
             Cancel
           </button>
-          <button type="submit" className="cancel-button" onClick={() => {updatePlayer(selectedPlayer, setSelectedPlayer, formData, players, setPlayers); handleCancel;}}>Save Player</button>
+          <button type="submit" className="cancel-button" onClick={() => {addPlayer(selectedPlayer, setSelectedPlayer, formData, players, setPlayers); handleCancel;}}>Save Player</button>
         </div>
       </form>
       <style>
