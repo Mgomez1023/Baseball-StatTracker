@@ -6,12 +6,9 @@ import { addPlayer } from "../utils/playerUtils"
 
 export default function AddPlayerForm({ onCancel, selectedPlayer, setSelectedPlayer, players, setPlayers }) {
   const [formData, setFormData] = useState({
-      height: {
-        weight: 0,
-        feet: 0,
-        inches: 0,
-
-    }
+    feet: "",
+    inches: "",
+    weight: "",
   });
 
   const [closing, setClosing] = useState(false);
@@ -176,6 +173,7 @@ export default function AddPlayerForm({ onCancel, selectedPlayer, setSelectedPla
                         <input
                             className="height-input"
                             type="number"
+                            name="feet"
                             min="4"
                             max="7"
                             value={formData.feet}
@@ -184,6 +182,7 @@ export default function AddPlayerForm({ onCancel, selectedPlayer, setSelectedPla
                         <input
                             className="height-input"
                             type="number"
+                            name="inches"
                             min="0"
                             max="11"
                             value={formData.inches}
@@ -202,6 +201,7 @@ export default function AddPlayerForm({ onCancel, selectedPlayer, setSelectedPla
 
                         <input
                             type="number"
+                            name="weight"
                             min="00"
                             max="300"
                             value={formData.weight}

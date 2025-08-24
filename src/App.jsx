@@ -66,7 +66,7 @@ function App() {
             </div>
 
             <div className="info-content1"> 
-              <p>Height: {selectedPlayer.height.feet}' {selectedPlayer.height.inches}"</p>
+              <p>Height: {selectedPlayer.feet}' {selectedPlayer.inches}"</p>
               <p>Weight: {selectedPlayer.weight} lbs</p>
             </div>
 
