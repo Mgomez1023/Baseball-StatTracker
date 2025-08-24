@@ -105,8 +105,16 @@ const defaultPlayer = {
     const secondPlayer = {
     id: 2,
     name: "Aaron Judge",
-    team: "Yankees",
-    position: "RF",
+    position: "RF" || "N/A",
+    number: 99 || "N/A",
+    team: "Yankees" || "N/A",
+    height: {
+        feet: 6 || 0,
+        inches: 7 || 0
+    },
+    weight: 260 || "N/A",
+    bats: "L" || "N/A",
+    throws: "L" || "N/A",
     stats: {
       runs: 47,
       singles: 103,

@@ -6,17 +6,12 @@ import { addPlayer } from "../utils/playerUtils"
 
 export default function AddPlayerForm({ onCancel, selectedPlayer, setSelectedPlayer, players, setPlayers }) {
   const [formData, setFormData] = useState({
-    date: "",
-    opponent: "",
-    atBats: 0,
-    walks: 0,
-    singles: 0,
-    doubles: 0,
-    triples: 0,
-    hr: 0,
-    strikeouts: 0,
-    stolenBases: 0,
-    runs: 0,
+      height: {
+        weight: 0,
+        feet: 0,
+        inches: 0,
+
+    }
   });
 
   const [closing, setClosing] = useState(false);
@@ -207,7 +202,7 @@ export default function AddPlayerForm({ onCancel, selectedPlayer, setSelectedPla
 
                         <input
                             type="number"
-                            min="100"
+                            min="00"
                             max="300"
                             value={formData.weight}
                             onChange={handleChange}

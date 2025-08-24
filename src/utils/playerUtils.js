@@ -6,11 +6,9 @@ export function addPlayer(selectedPlayer, setSelectedPlayer, formData, players, 
         position: formData.position || "N/A",
         number: formData.number || "N/A",
         team: formData.team || "N/A",
-        height: {
-            feet: formData.feet || 0,
-            inches: formData.inches || 0
-        },
-        weight: formData.weight || "N/A",
+        feet: formData.feet || "0",
+        inches: formData.inches || "0",
+        weight: formData.weight || "0",
         bats: formData.bats || "N/A",
         throws: formData.throws || "N/A",
     };
