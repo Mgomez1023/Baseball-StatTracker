@@ -52,10 +52,13 @@
 
 .stats-footnote {
   font-size: 0.875rem; /* text-sm */
-  color: var(--text); /* gray-600 */
-  margin-top: 0.75rem;
+  color: var(--main-blue); /* gray-600 */
+  margin-top: 1.5rem;
 }
 
+.stats-footnote p {
+  margin: 1rem 0;
+}
 .stats-footnote ul {
   list-style: disc;
   margin-left: 1.25rem;
