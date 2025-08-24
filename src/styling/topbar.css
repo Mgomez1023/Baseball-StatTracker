@@ -147,7 +147,7 @@
 }
 
 .player-dropdown.open {
-    height: auto;
+    height: 90vh;
     border-bottom: var(--shadow);
 }
 
