@@ -1,7 +1,7 @@
 import React from "react";
 import PlayerList from "./PlayerList";
 import AddPlayerForm from "./AddPlayerForm";
-import "../styling/playerPage.css"
+import "../styling/PlayerPage.css"
 
 function PlayerPage({ players, onCancel, selectedPlayer, setSelectedPlayer, setPlayers }) {
     const [showForm, setShowForm] = React.useState(false);
