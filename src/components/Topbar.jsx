@@ -6,6 +6,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { useState, useEffect } from 'react';
 import { addPlayer } from "../utils/playerUtils"
 import AddPlayerForm from './AddPlayerForm.jsx';
+import PlayerList from './PlayerList.jsx';
 
 const toggle = () => {
   if (document.body.classList.contains("dark")) {
@@ -25,7 +26,15 @@ export default function Topbar({players, setPlayers, selectedPlayer, setSelected
   const [addMenuOpen, setAddMenuOpen] = useState(false);
   const toggleAddMenu = () => setAddMenuOpen(!addMenuOpen);
   const [showForm, setShowForm] = useState(false);
-  
+
+  const handleSelect = (player) => {
+    setSelectedPlayer(player);
+    togglePlayerMenu();
+  }
+
+  const handleDelete = (playerId) => {
+    setPlayers((prevPlayers) => prevPlayers.filter((p) => p.id !== playerId));
+  }
 
   const playerName = "michael jackson";
 
@@ -63,20 +72,13 @@ export default function Topbar({players, setPlayers, selectedPlayer, setSelected
           <ul>
 
             {/* Example: Show players from storage */}
-            <ul>
-              {players.map((player) => (
-                <button
-                  key={player.id}
-                  onClick={() => {
-                    setSelectedPlayer(player);
-                    togglePlayerMenu();
-                  }}                  
-                  className="button"
-                >
-                  {player.name}
-                </button>
-              ))}
-            </ul>
+
+            <PlayerList 
+              players={players} 
+              setSelectedPlayer={setSelectedPlayer} 
+              onSelect={handleSelect} 
+              onDelete={handleDelete} 
+            />
 
             {/* Example: Button to add a new player */}
             <button
