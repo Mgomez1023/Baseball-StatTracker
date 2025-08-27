@@ -7,6 +7,7 @@ import HittingTable from './components/hittingTable'
 import GameTable from './components/gameTable'
 import AddGameForm from './components/AddGameForm'
 import PlayerPage from './components/PlayerPage'
+import PlayerInfoCard from './components/PlayerInfoCard'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -61,27 +62,9 @@ function App() {
           <Topbar className="topbar" players={players} setPlayers={setPlayers} selectedPlayer={selectedPlayer} setSelectedPlayer={setSelectedPlayer} />
 
           <div className="content"> 
-            <div className="player-info"> 
 
-              <h2 className="player-name">{selectedPlayer.name}</h2>
+            <PlayerInfoCard selectedPlayer={selectedPlayer} />
 
-              <div className="info-content1">
-                <p>Team: {selectedPlayer.team}</p>
-                <p>Number: {selectedPlayer.number}</p>
-              </div>
-
-              <div className="info-content1">
-                <p>Position: {selectedPlayer.position}</p>
-                <p>Bats: {selectedPlayer.bats}</p>
-                <p>Throws: {selectedPlayer.throws}</p>
-              </div>
-
-              <div className="info-content1"> 
-                <p>Height: {selectedPlayer.feet}' {selectedPlayer.inches}"</p>
-                <p>Weight: {selectedPlayer.weight} lbs</p>
-              </div>
-
-            </div>
             <div className="player-content">
               <div className="label1">
                 <div className="number">
